@@ -1,28 +1,31 @@
-/* 基本字體與色彩（對 tag 使用 CSS selector：需求） */
+/* Base typography and layout (tag selector used) */
 html, body {
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Noto Sans TC', Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #111;
   background: #fafafa;
   line-height: 1.6;
-  margin: 0; /* 盒模型屬性之一（需求） */
+  margin: 0; /* Box model property */
 }
 
+/* Headings */
 h1, h2, h3 {
   line-height: 1.25;
-  margin: 0 0 8px 0;
+  margin: 0 0 8px 0; /* Box model property */
 }
 
+/* Centered content wrapper */
 .container {
   max-width: 960px;
-  margin: 0 auto;     /* 盒模型屬性（需求） */
-  padding: 24px;      /* 盒模型屬性（需求） */
+  margin: 0 auto;   /* Box model property */
+  padding: 24px;    /* Box model property */
 }
 
+/* Vertical spacing between sections */
 .section {
-  margin-top: 32px;
+  margin-top: 32px; /* Box model property */
 }
 
-/* 建立並使用 .title/.subtitle/.card... 等 class（需求） */
+/* Reusable classes */
 .title {
   font-size: 40px;
   font-weight: 800;
@@ -35,35 +38,38 @@ h1, h2, h3 {
   margin-bottom: 16px;
 }
 
-/* id 選擇器（需求） */
+/* ID selector to style the hero specifically */
 #hero {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   gap: 24px;
   align-items: center;
-  background: white;
-  border: 1px solid #eee;       /* 盒模型屬性（需求） */
-  border-radius: 16px;          /* 盒模型屬性（需求） */
-  padding: 32px;                /* 盒模型屬性（需求） */
+  background: #fff;
+  border: 1px solid #eee; /* Box model property */
+  border-radius: 16px;    /* Box model property */
+  padding: 32px;          /* Box model property */
   box-shadow: 0 10px 24px rgba(0,0,0,0.06);
 }
 
+/* Image styling */
 .avatar img {
   width: 100%;
   height: auto;
   display: block;
   border-radius: 12px;
-  border: 4px solid #f2f2f2;    /* 盒模型屬性（需求） */
+  border: 4px solid #f2f2f2; /* Box model property */
 }
 
+/* Section heading */
 .section-title {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 16px;
 }
 
+/* Card component (reused multiple times) */
 .card {
-  background: white;
+  background: #fff;
   border: 1px solid #eee;
   border-radius: 16px;
   padding: 20px;
@@ -81,7 +87,7 @@ h1, h2, h3 {
   color: #444;
 }
 
-/* 連結 hover 顏色（需求） */
+/* Link hover style (requirement) */
 a.link {
   text-decoration: none;
   font-weight: 600;
@@ -89,10 +95,10 @@ a.link {
 }
 a.link:hover {
   color: #0b66ff;
-  border-color: #0b66ff; /* hover 時顯示底線顏色變化 */
+  border-color: #0b66ff;
 }
 
-/* 按鈕樣式（重用 .btn 與 .btn.ghost：class 重複使用） */
+/* Buttons (class reused + variant via .ghost) */
 .btn {
   display: inline-block;
   padding: 10px 14px;
@@ -105,8 +111,8 @@ a.link:hover {
   transition: transform 0.1s ease, opacity 0.2s ease;
 }
 .btn:hover {
-  opacity: 0.9;                /* 滑過效果 */
-  transform: translateY(-1px); /* 微浮起 */
+  opacity: 0.9;
+  transform: translateY(-1px);
 }
 
 .btn.ghost {

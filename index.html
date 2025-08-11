@@ -1,52 +1,57 @@
 <!doctype html>
-<html lang="zh-Hant">
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <!-- ✅ 正確使用 meta description（需求） -->
-  <meta name="description" content="Jamie Wang 的個人網站：MSITM @ UT Austin｜作品集、經歷與聯絡方式" />
-  <title>Jamie Wang｜Portfolio</title>
+  <!-- SEO: concise description for search engines -->
+  <meta name="description" content="Jamie Wang — MSITM at UT Austin. Portfolio, projects, and contact information." />
+  <title>Jamie Wang — Portfolio</title>
+
+  <!-- Web font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- 外部樣式檔（需求） -->
+
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="./stylesheet.css" />
 </head>
 <body>
-  <!-- 用 <div> 分成區塊（需求） -->
+  <!-- Header / Hero section; uses an ID so we can style it specifically in CSS -->
   <div id="hero" class="container section">
     <header>
-      <h1 class="title">Hi, I’m Jamie 👋</h1>
+      <h1 class="title">Hi, I'm Jamie 👋</h1>
       <p class="subtitle">MSITM @ UT Austin · Frontend &amp; Product Analytics</p>
-      <!-- <a> 連到外站（需求） -->
+
+      <!-- External links (open in new tab) -->
       <a class="btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
       <a class="btn ghost" href="https://github.com/jamiewang-0119" target="_blank" rel="noopener">GitHub</a>
     </header>
 
-    <!-- 圖片（需求） -->
+    <!-- Image with alt text for accessibility -->
     <figure class="avatar">
-      <img src="images/profile.png" alt="Jamie 的大頭照" />
-      <figcaption>👩‍💻 喜歡設計方法、資料分析與前端開發</figcaption>
+      <img src="images/profile.png" alt="Portrait of Jamie" />
+      <figcaption>Curious about design methods, data analysis, and frontend development.</figcaption>
     </figure>
   </div>
 
+  <!-- Projects section; note the repeated use of the .card class -->
   <div class="container section">
     <h2 class="section-title">Projects</h2>
 
-    <!-- 重複使用 class（需求：同一個 class 套用到至少兩個元素） -->
     <div class="card project">
       <h3 class="card-title">Hardware Tracking Dashboard</h3>
-      <p class="card-desc">用 React + Material UI 做的前端概念驗證，側重可用性與元件可重用。</p>
+      <p class="card-desc">A React + Material UI proof of concept focused on usability and reusable components.</p>
       <a class="link" href="https://example.com/demo1" target="_blank" rel="noopener">Demo</a>
     </div>
 
     <div class="card project">
       <h3 class="card-title">Portfolio Site</h3>
-      <p class="card-desc">這個網站的原始碼與設計記錄。</p>
+      <p class="card-desc">This website’s source and design notes.</p>
       <a class="link" href="https://example.com/demo2" target="_blank" rel="noopener">Source</a>
     </div>
   </div>
 
+  <!-- Contact / Footer -->
   <footer class="container">
     <small>© 2025 Jamie Wang · Austin, TX</small>
   </footer>
